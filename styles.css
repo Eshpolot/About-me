@@ -44,10 +44,10 @@ body {
 
 /* Profile Image */
 .profile-image-container {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: auto;
   margin: 0 auto 20px;
-  border-radius: 50%;
+  border-radius: 16px;
   overflow: hidden;
   border: 5px solid white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -55,8 +55,8 @@ body {
 
 .profile-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 /* Name/Logo */
@@ -119,4 +119,23 @@ body {
   .social-buttons {
     grid-template-columns: 1fr;
   }
+}
+/* Labels are placeholders until the owner shares their own links. */
+.social-button:disabled {
+  border: 0;
+  font-size: 1rem;
+  opacity: .6;
+  cursor: default;
+}
+.social-button:disabled:hover {
+  transform: none;
+}
+.links-note {
+  margin-top: 18px;
+  color: #6c757d;
+  font-size: .85rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .social-button { transition: none; }
+  .card:hover { transform: none; }
 }
